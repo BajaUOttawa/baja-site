@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rough Rider Racing – uOttawa Baja SAE Team</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Hero section -->
+  <header class="hero">
+    <div class="overlay">
+      <div class="hero-content container">
+        <img src="crest.png" alt="Baja uOttawa crest" class="crest" />
+        <div class="text">
+          <h1>Rough Rider Racing</h1>
+          <p>University of Ottawa Baja SAE team</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About section -->
+  <section id="about" class="about container">
+    <h2>About Us</h2>
+    <p>
+      Rough Rider Racing (RRR) is the University of Ottawa Faculty of Engineering’s Baja SAE team. Baja SAE is an international competition organised by SAE International that challenges students to design and build a single‑seat utility terrain vehicle (UTV) built to withstand harsh off‑road conditions【656525568612103†L51-L60】. There are three North American competitions annually, each with around 100 competing teams【994210243108119†L52-L54】.
+    </p>
+    <p>
+      Our team resumed operations after the COVID‑19 pause and now consists of around 25 passionate students from mechanical, electrical, civil, software, computer and biomedical engineering. We’re currently preparing for our next competition in Holly, Michigan (September 12‑15 2024).  Through Baja SAE we gain hands‑on experience in design, fabrication, project management and teamwork – skills we bring back to the classroom and future careers.
+    </p>
+  </section>
+
+  <!-- Gallery section -->
+  <section id="gallery" class="gallery container">
+    <h2>Gallery</h2>
+      <div class="grid">
+      <div class="grid-item"><img src="bajacar.jpg" alt="Baja car and formula car" /></div>
+      <div class="grid-item"><img src="BAJAWebsitePic.jpg" alt="Baja buggy climbing" /></div>
+      <div class="grid-item"><img src="bajacar2.jpg" alt="Baja buggy on track" /></div>
+      <div class="grid-item"><img src="rrr_logo.png" alt="Rough Rider Racing logo" /></div>
+    </div>
+  </section>
+
+  <!-- Sponsorship section -->
+  <section id="sponsorship" class="sponsorship container">
+    <h2>Sponsorship Levels</h2>
+    <p>Rough Rider Racing relies on the generosity of sponsors to build, test and compete.  Your support helps us purchase materials, pay registration fees and travel to competitions.  We offer several tiers of recognition:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Contribution</th>
+          <th>Benefits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bronze</td>
+          <td>$250</td>
+          <td>Recognition on our website and social media</td>
+        </tr>
+        <tr>
+          <td>Silver</td>
+          <td>$500</td>
+          <td>Bronze benefits plus your logo on our buggy</td>
+        </tr>
+        <tr>
+          <td>Gold</td>
+          <td>$1,500</td>
+          <td>Silver benefits plus a framed team photo and invitations to our demo days</td>
+        </tr>
+        <tr>
+          <td>Platinum</td>
+          <td>$3,000+</td>
+          <td>Gold benefits plus prominent logo placement and speaking opportunity at our events</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">All amounts are in CAD.  Please <a href="#contact">get in touch</a> to discuss custom sponsorship packages.</p>
+  </section>
+
+  <!-- Contact section -->
+  <section id="contact" class="contact container">
+    <h2>Contact Us</h2>
+    <p>If you’re interested in sponsoring the team, joining us or learning more about Baja SAE, please send us a message.  We’d love to hear from you.</p>
+    <form action="mailto:baja@uottawa.ca" method="GET" enctype="text/plain">
+      <div class="form-row">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-row">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-row">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" value="Baja uOttawa inquiry" />
+      </div>
+      <div class="form-row">
+        <label for="message">Message:</label>
+        <textarea id="message" name="body" rows="5" required></textarea>
+      </div>
+      <button type="submit">Send Email</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <!-- dynamic year will be replaced by script --> <span id="year"></span> Rough Rider Racing – Baja SAE uOttawa.  All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Insert current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

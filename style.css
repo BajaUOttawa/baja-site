@@ -1,0 +1,172 @@
+/* Base styles for the Rough Rider Racing website */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+/* Utility classes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #7c2638; /* maroon inspired by uOttawa colours */
+  margin-top: 0;
+}
+
+/* Hero section */
+.hero {
+  background: url('BAJAWebsitePic.jpg') center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hero .hero-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero .crest {
+  width: 120px;
+  margin-right: 20px;
+}
+
+.hero .text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero .text p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* About section */
+.about p {
+  line-height: 1.6;
+  max-width: 900px;
+  margin-bottom: 1rem;
+}
+
+/* Gallery section */
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+/* Sponsorship section */
+.sponsorship table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.sponsorship th, .sponsorship td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.sponsorship th {
+  background-color: #7c2638;
+  color: #fff;
+}
+
+.sponsorship tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.sponsorship tr:hover {
+  background-color: #e6e6e6;
+}
+
+.sponsorship .note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Contact section */
+.contact form {
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+.contact .form-row {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact button {
+  background-color: #7c2638;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #5e1d2a;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
