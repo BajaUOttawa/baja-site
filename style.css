@@ -1,9 +1,9 @@
-/* Base styles for the Rough Rider Racing website */
+/* Base styles */
 
-/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap');
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
@@ -11,7 +11,21 @@ html, body {
   background-color: #f8f8f8;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Layout helpers */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 /* Top header (white bar with crest + title) */
+
 .top-header {
   background-color: #ffffff;
   display: flex;
@@ -24,13 +38,13 @@ html, body {
   z-index: 1000;
 }
 
-.top-header .header-logo {
-  height: 40px;          /* keeps crest about the same height as the text */
+.header-logo {
+  height: 40px; /* keep crest around text height */
   width: auto;
   margin-right: 12px;
 }
 
-.top-header .header-title {
+.header-title {
   font-family: 'Oswald', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
@@ -38,219 +52,89 @@ html, body {
   margin: 0;
 }
 
-/* Utility classes */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+/* Hero */
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Hero section */
 .hero {
   background: url('BAJAWebsitePic.jpg') center/cover no-repeat;
   position: relative;
   color: #fff;
-  min-height: 70vh;
+  min-height: 65vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: left;
 }
 
 .hero::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(10, 2, 3, 0.8), rgba(75, 0, 23, 0.6));
+  background: linear-gradient(
+    135deg,
+    rgba(10, 2, 3, 0.75),
+    rgba(75, 0, 23, 0.6)
+  );
 }
 
 .hero-inner {
   position: relative;
   z-index: 1;
-  width: 100%;
-}
-
-.hero-content {
-  max-width: 650px;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 800px;
 }
 
 .hero .crest {
-  width: 80px;           /* smaller crest inside hero */
+  width: 80px; /* not huge; roughly inline with text block */
   max-width: 20vw;
-  margin-bottom: 0.8rem;
+  flex-shrink: 0;
 }
 
-.hero h1 {
+.hero-text h1 {
   font-family: 'Oswald', sans-serif;
-  font-size: 2.5rem;
-  margin: 0 0 0.5rem;
+  font-size: 2.4rem;
+  margin: 0 0 0.25rem;
 }
 
-.hero h2 {
-  font-size: 1.2rem;
+.hero-text h2 {
+  font-size: 1.1rem;
   font-weight: 400;
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
 }
 
-.hero p {
-  font-size: 1rem;
+.hero-text p {
+  font-size: 0.98rem;
   line-height: 1.6;
-  max-width: 550px;
-}
-
-.badges {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.badge {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 999px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* CTA buttons */
-.cta-buttons {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1.3rem;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.03em;
-  background-color: #800020;
-  color: #fff;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  border: 1px solid #fff;
-}
-
-.btn:hover {
-  opacity: 0.9;
+  max-width: 520px;
+  margin: 0;
 }
 
 /* Section titles */
+
 .section-title {
-  text-align: center;
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0 1.5rem;
+  text-align: left;
   color: #4b0017;
 }
 
-.section-subtitle {
-  text-align: center;
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 2rem;
-}
+/* About */
 
-/* About section */
 .about {
-  padding: 3.5rem 0 2.5rem;
+  padding: 3rem 0 2.5rem;
   background-color: #ffffff;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
-  gap: 2.5rem;
-  align-items: center;
-}
-
-.about-text p {
+.about p {
   line-height: 1.7;
-  margin-bottom: 0.9rem;
   font-size: 0.98rem;
-}
-
-.highlight {
-  color: #800020;
-  font-weight: 600;
-}
-
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1.2rem;
-}
-
-.stat-item {
-  flex: 1 1 120px;
-}
-
-.stat-number {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #800020;
-  font-family: 'Oswald', sans-serif;
-}
-
-.stat-label {
-  font-size: 0.85rem;
-  color: #666;
-}
-
-/* Sponsorship section */
-.sponsorship {
-  padding: 3.5rem 0;
-  background-color: #f3f3f7;
-}
-
-.sponsorship table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
-  font-size: 0.95rem;
-}
-
-.sponsorship th,
-.sponsorship td {
-  border: 1px solid #ddd;
-  padding: 0.75rem;
-  text-align: left;
-}
-
-.sponsorship th {
-  background-color: #800020;
-  color: #fff;
-}
-
-.sponsorship tr:nth-child(even) td {
-  background-color: #fafafa;
-}
-
-.sponsorship-level {
-  font-weight: 600;
+  margin: 0 0 0.9rem;
 }
 
 /* Gallery */
+
 .gallery {
-  padding: 3.5rem 0;
+  padding: 3rem 0;
   background-color: #ffffff;
 }
 
@@ -268,21 +152,64 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* Contact section */
-.contact {
-  padding: 3.5rem 0 4rem;
-  background-color: #f8f8f8;
+/* Sponsorship */
+
+.sponsorship {
+  padding: 3rem 0;
+  background-color: #f3f3f7;
 }
 
-.contact-inner {
-  max-width: 650px;
-  margin: 0 auto;
+.sponsorship p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0 0 1.25rem;
+}
+
+.sponsorship table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.sponsorship th,
+.sponsorship td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.sponsorship th {
+  background-color: #800020;
+  color: #fff;
+}
+
+.sponsorship tr:nth-child(even) td {
+  background-color: #fafafa;
+}
+
+.sponsorship-level {
+  font-weight: 600;
+}
+
+.sponsorship .note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Contact */
+
+.contact {
+  padding: 3rem 0 3.5rem;
+  background-color: #f8f8f8;
 }
 
 .contact p {
   font-size: 0.95rem;
   color: #555;
-  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
 }
 
 .contact-form {
@@ -290,15 +217,15 @@ a:hover {
   gap: 1rem;
 }
 
-.contact-form label {
+.form-row label {
+  display: block;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
-  display: block;
 }
 
-.contact-form input,
-.contact-form textarea {
+.form-row input,
+.form-row textarea {
   width: 100%;
   padding: 0.6rem 0.7rem;
   border-radius: 6px;
@@ -308,13 +235,30 @@ a:hover {
   box-sizing: border-box;
 }
 
-.contact-form textarea {
+.form-row textarea {
   resize: vertical;
   min-height: 120px;
 }
 
+.btn-submit {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #800020;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  opacity: 0.92;
+}
+
 /* Footer */
-footer {
+
+.footer {
   background-color: #111;
   color: #ccc;
   padding: 1rem 0;
@@ -322,35 +266,27 @@ footer {
   font-size: 0.8rem;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .top-header {
-    flex-direction: row;
-    align-items: center;
-  }
+/* Responsive */
 
-  .top-header .header-title {
+@media (max-width: 768px) {
+  .header-title {
     font-size: 0.95rem;
   }
 
   .hero {
-    text-align: left;
-    min-height: 60vh;
+    min-height: 55vh;
   }
 
-  .hero h1 {
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-text h1 {
     font-size: 2rem;
   }
 
-  .hero h2 {
+  .hero-text h2 {
     font-size: 1rem;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats {
-    flex-direction: row;
   }
 }
