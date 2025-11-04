@@ -11,6 +11,33 @@ html, body {
   background-color: #f8f8f8;
 }
 
+/* Top header styles */
+.top-header {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-header .header-logo {
+  height: 50px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.top-header .header-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 0;
+}
+
 /* Utility classes */
 .container {
   width: 90%;
